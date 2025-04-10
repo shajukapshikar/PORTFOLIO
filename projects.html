@@ -10,6 +10,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #111;
@@ -26,23 +27,28 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
     }
+
     .navbar .brand {
       font-size: 1rem;
       font-weight: bold;
       color: #fff;
       letter-spacing: 1px;
     }
+
     .navbar nav {
       display: flex;
       gap: 2rem;
     }
+
     .navbar nav a {
       color: #ccc;
       text-decoration: none;
       font-size: 0.85rem;
       transition: color 0.3s;
     }
+
     .navbar nav a:hover {
       color: #fff;
       border-bottom: 2px solid #fff;
@@ -50,12 +56,11 @@
     }
 
     .projects-section {
-  padding: 60px 40px;
-  max-width: 1200px;
-  margin: auto;
-  margin-top: -40px;
-}
-
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+      margin-top: -40px;
+    }
 
     .projects-section h1 {
       text-align: center;
@@ -78,6 +83,7 @@
       box-shadow: 0 0 15px rgba(255,255,255,0.05);
       transition: transform 0.3s ease;
     }
+
     .project-card:hover {
       transform: translateY(-5px);
     }
@@ -86,7 +92,7 @@
       width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
-      height: 580px;
+      height: 500px;
       object-fit: cover;
     }
 
@@ -134,8 +140,47 @@
     }
 
     @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .navbar nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navbar nav a {
+        font-size: 1rem;
+      }
+
       .projects-section {
         padding: 40px 20px;
+      }
+
+      .projects-section h1 {
+        font-size: 28px;
+      }
+
+      .project-card img {
+        height: 250px;
+      }
+
+      .project-card h2 {
+        font-size: 18px;
+      }
+
+      .project-card p {
+        font-size: 13px;
+      }
+
+      .page-number {
+        font-size: 10px;
+        bottom: 10px;
+        right: 20px;
       }
     }
   </style>
@@ -158,24 +203,19 @@
     <h1>My Projects</h1>
 
     <div class="projects-grid">
-
       <!-- Project 1 -->
       <div class="project-card">
         <a href="https://shajukapshikar.github.io/TO-DO-LISTS/" target="_blank">
-            <img src="/PORTFOLIO/images/todo.png" alt="To-Do App Preview" style="cursor: pointer;" />
-          </a>          
+          <img src="/PORTFOLIO/images/todo.png" alt="To-Do App Preview" style="cursor: pointer;" />
+        </a>
         <h2>📝 To-Do Lists</h2>
         <p>A simple to-do list with light/dark mode, task filters, and local storage built using JavaScript.
-            Left Sidebar: Only for decoration, no functionality.
-        </p>
+        Left Sidebar: Only for decoration, no functionality.</p>
         <div class="project-links">
           <a href="https://shajukapshikar.github.io/TO-DO-LISTS/" target="_blank">🔗 Live Demo</a>
           <a href="https://github.com/Shajukapshikar/TO-DO-LISTS" target="_blank">💻 View Code</a>
         </div>
       </div>
-
-    
-
     </div>
   </section>
 

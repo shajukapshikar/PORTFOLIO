@@ -127,6 +127,43 @@
         color:rgb(199, 209, 174);
        
     }
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1rem;
+      }
+
+      .img-left,
+      .img-right {
+        width: 30vw;
+        max-width: none;
+        height: auto;
+      }
+
+      .img-right {
+        margin-left: -40px;
+        margin-top: 80px;
+      }
+
+      .about-text {
+        padding-left: 1rem;
+        min-width: 300px;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
+      }
+
+      .info-block h3 {
+        font-size: 1.5rem;
+      }
+
+      .info-block p {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
