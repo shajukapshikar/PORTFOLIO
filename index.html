@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shaju Kapshikar | Portfolio</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    
+   
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1c1c1c;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .brand {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+      /* margin-top: 10px; */
+    }
+    .navbar nav {
+      display: flex;
+      gap: 2rem;
+    }
+    .navbar nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.3s;
+    }
+    .navbar nav a:hover {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      height: 500px; 
+    }
+    .hero .hero-img {
+      flex: 1;
+      height: 700px;
+      background-color: #000;
+      overflow: hidden;
+    }
+    .hero .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero .hero-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 50px;
+    }
+    .hero .hero-content h1 {
+      font-size: 80px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero .hero-content p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+    .hero .hero-content .buttons {
+      display: flex;
+      gap: 20px;
+    }
+    .hero .hero-content .buttons .btn-primary {
+  background-color: #fff;
+  color: #111;
+  padding: 12px 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none; 
+  display: inline-block;
+}
+
+    .hero .hero-content .buttons .btn-primary:hover {
+      background-color: #8e7b7b;
+    }
+    
+    /* Page Number */
+    .page-number {
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        height: auto;
+      }
+      .hero .hero-img,
+      .hero .hero-content {
+        flex: unset;
+        width: 100%;
+        padding: 20px;
+      }
+      .hero .hero-img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="brand">My Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-img">
+      <img src="/images/me.jpg" alt="Portfolio Image" />
+    </div>
+    <div class="hero-content">
+      <h1>SHAJU<br />KAPSHIKAR</h1>
+      <p>
+        I have a strong interest in technology, with a focus on creating clean, user-centric web interfaces and exploring meaningful insights through data. I am committed to continuous learning and growth through practical experience and project-based development.
+      </p>
+      <div class="buttons">
+        <a href="projects.html" class="btn-primary">Explore Now</a>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="page-number">Page | 01</div>
+
+</body>
+</html>

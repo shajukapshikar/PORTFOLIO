@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Shaju Kapshikar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1c1c1c;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .brand {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 2rem;
+    }
+    .navbar nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.3s;
+    }
+    .navbar nav a:hover {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 2px;
+    }
+
+    .projects-section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: -40px;
+}
+
+
+    .projects-section h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.05);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      height: 580px;
+      object-fit: cover;
+    }
+
+    .project-card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .project-links a {
+      text-decoration: none;
+      margin-right: 10px;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .project-links a:first-child {
+      background-color: #fff;
+      color: #111;
+    }
+
+    .project-links a:last-child {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .project-links a:hover {
+      opacity: 0.85;
+    }
+
+    .page-number {
+      position: fixed;
+      bottom: 20px;
+      right: 40px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .projects-section {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="brand">My Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h1>My Projects</h1>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <a href="https://shajukapshikar.github.io/TO-DO-LISTS/" target="_blank">
+            <img src="/images/todo.png" alt="To-Do App Preview" style="cursor: pointer;" />
+          </a>          
+        <h2>📝 To-Do Lists</h2>
+        <p>A simple to-do list with light/dark mode, task filters, and local storage built using JavaScript.
+            Left Sidebar: Only for decoration, no functionality.
+        </p>
+        <div class="project-links">
+          <a href="https://shajukapshikar.github.io/TO-DO-LISTS/" target="_blank">🔗 Live Demo</a>
+          <a href="https://github.com/Shajukapshikar/TO-DO-LISTS" target="_blank">💻 View Code</a>
+        </div>
+      </div>
+
+    
+
+    </div>
+  </section>
+
+  <div class="page-number">Page | 02</div>
+
+</body>
+</html>

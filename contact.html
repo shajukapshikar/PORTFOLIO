@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    header {
+      background-color: #1c1c1c;
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    header .brand {
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+  
+   
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1c1c1c;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .brand {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
+
+  
+    .main-container {
+      flex: 1;
+      display: flex;
+      min-height: 100%;
+    }
+  
+    .left-img {
+      width: 50%;
+      background: url('/images/me4.jpg') no-repeat center center;
+      background-size: contain;
+      background-color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .right-content {
+      width: 50%;
+      background-color: #111;
+      padding: 4rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .right-content h1 {
+      font-size: 100px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  
+    .right-content hr{
+      width: 50px;
+      border: 2px solid #fff;
+      margin-bottom: 1.5rem;
+    }
+  
+    .right-content p {
+      color: #ccc;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+  
+    .contact-info p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+  
+    .contact-info i {
+      margin-right: 10px;
+      color: #ccc;
+    }
+  
+    .page-number {
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+  
+      .left-img,
+      .right-content {
+        width: 100%;
+      }
+  
+      .left-img {
+        height: 250px;
+      }
+  
+      .right-content {
+        padding: 2rem;
+      }
+  
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+  
+      .right-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="brand">My Portfolio</div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="aboutme.html">About Me</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+      
+  <div class="main-container">
+    <div class="left-img"></div>
+    <div class="right-content">
+      <h1>Get in Touch</h1>
+      <hr>
+      <p>If you'd like to connect, collaborate, or have any questions, feel free to reach out.</p>
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> +91 9637519308</p>
+        <p><i class="fas fa-envelope"></i> shajukapshikar318@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Goa, India</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-number">Page | 04</div>
+
+</body>
+</html>
