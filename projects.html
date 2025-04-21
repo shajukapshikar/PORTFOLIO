@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Shaju Kapshikar</title>
+
+  <!-- Font Awesome (optional for icon) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -17,24 +21,32 @@
       color: #fff;
     }
 
+    /* Navbar Styles */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 15px 40px;
       background-color: #1c1c1c;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
       flex-wrap: wrap;
     }
 
     .navbar .brand {
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       color: #fff;
-      letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     .navbar nav {
@@ -45,7 +57,7 @@
     .navbar nav a {
       color: #ccc;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       transition: color 0.3s;
     }
 
@@ -55,11 +67,11 @@
       padding-bottom: 2px;
     }
 
+    /* Projects Section */
     .projects-section {
       padding: 60px 40px;
       max-width: 1200px;
       margin: auto;
-      margin-top: -40px;
     }
 
     .projects-section h1 {
@@ -93,7 +105,6 @@
       border-radius: 10px;
       margin-bottom: 15px;
       height: 500px;
-      object-fit: cover;
     }
 
     .project-card h2 {
@@ -141,20 +152,46 @@
 
     @media (max-width: 768px) {
       .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+      }
+
+      .navbar .brand {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .menu-toggle {
+        display: block;
       }
 
       .navbar nav {
+        display: none;
         flex-direction: column;
-        gap: 10px;
         width: 100%;
-        margin-top: 10px;
+        background-color: #1c1c1c;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0;
+        border-top: 1px solid #333;
+      }
+
+      .navbar nav.active {
+        display: flex;
       }
 
       .navbar nav a {
-        font-size: 1rem;
+        padding: 0.7rem 1rem;
+        width: 100%;
+        text-align: left;
+        font-size: 0.95rem;
+        border-left: 3px solid transparent;
+      }
+
+      .navbar nav a:hover {
+        border-left: 3px solid #fff;
+        background-color: #222;
       }
 
       .projects-section {
@@ -190,6 +227,7 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="brand">My Portfolio</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -206,7 +244,7 @@
       <!-- Project 1 -->
       <div class="project-card">
         <a href="https://shajukapshikar.github.io/TO-DO-LISTS/" target="_blank">
-          <img src="/PORTFOLIO/images/todo.png" alt="To-Do App Preview" style="cursor: pointer;" />
+          <img src="/images/todo.png" alt="To-Do App Preview" style="cursor: pointer;" />
         </a>
         <h2>📝 To-Do Lists</h2>
         <p>A simple to-do list with light/dark mode, task filters, and local storage built using JavaScript.
@@ -220,6 +258,12 @@
   </section>
 
   <div class="page-number">Page | 02</div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.navbar nav').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>

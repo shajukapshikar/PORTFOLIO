@@ -14,6 +14,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #111;
       color: #fff;
+      
     }
 
     .navbar {
@@ -33,6 +34,15 @@
       font-weight: bold;
       color: #fff;
       letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     .navbar nav {
@@ -67,7 +77,7 @@
 
     .hero .hero-img img {
       width: 98%;
-      height: 98%;
+      height: 85%;
       object-fit: cover;
     }
 
@@ -123,71 +133,115 @@
       color: #aaa;
     }
 
-   /* Mobile Responsive Only - Baaki sab untouched hai */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
+    /* Responsive Design for Mobile */
+    @media (max-width: 768px) {
+      body {
+        overflow: auto;
+      }
 
-  .navbar nav {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    margin-top: 10px;
-  }
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+      }
 
-  .navbar nav a {
-    font-size: 1rem;
-  }
+      .navbar .brand {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
 
-  .hero {
-    flex-direction: column;
-    height: auto;
-  }
+      .menu-toggle {
+        display: block;
+      }
 
-  .hero .hero-img {
-    width: 100%;
-    height: 300px;
-  }
+      .navbar nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1c1c1c;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0;
+        border-top: 1px solid #333;
+      }
 
-  .hero .hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+      .navbar nav.active {
+        display: flex;
+      }
 
-  .hero .hero-content {
-    width: 100%;
-    padding: 20px;
-  }
+      .navbar nav a {
+        padding: 0.7rem 1rem;
+        width: 100%;
+        text-align: left;
+        font-size: 0.95rem;
+        border-left: 3px solid transparent;
+      }
 
-  .hero .hero-content h1 {
-    font-size: 36px;
-  }
+      .navbar nav a:hover {
+        border-left: 3px solid #fff;
+        background-color: #222;
+      }
 
-  .hero .hero-content p {
-    font-size: 14px;
-  }
+      .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
 
-  .hero .hero-content .buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
+      .hero .hero-img {
+        width: 100%;
+        height: 250px;
+      }
 
-  .hero .hero-content .buttons .btn-primary {
-    width: 100%;
-    text-align: center;
-  }
+      .hero .hero-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
 
-  .page-number {
-    font-size: 10px;
-    right: 20px;
-    bottom: 10px;
-  }
+      .hero .hero-content {
+        padding: 1.5rem 0;
+        text-align: center;
+      }
+
+      .hero .hero-content h1 {
+        font-size: 32px;
+        line-height: 1.3;
+      }
+
+      .hero .hero-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #ccc;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero .hero-content .buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .hero .hero-content .buttons .btn-primary {
+        width: 90%;
+        text-align: center;
+        padding: 12px;
+        font-size: 15px;
+        border-radius: 8px;
+      }
+
+      .page-number {
+  position: static;
+  text-align: center;
+  margin: 20px ;
+  font-size: 12px;
+  color: #aaa;
 }
 
+
+    }
   </style>
 </head>
 <body>
@@ -195,6 +249,7 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="brand">My Portfolio</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -206,7 +261,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-img">
-      <img src="/PORTFOLIO/images/me.jpg" alt="Portfolio Image" />
+      <img src="/images/me.jpg" alt="Portfolio Image" />
     </div>
     <div class="hero-content">
       <h1>SHAJU<br />KAPSHIKAR</h1>
@@ -221,5 +276,10 @@
 
   <div class="page-number">Page | 01</div>
 
+  <script>
+    function toggleMenu() {
+      document.querySelector('.navbar nav').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
